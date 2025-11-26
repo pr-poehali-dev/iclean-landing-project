@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
+import Calculator from '@/components/Calculator';
 
 const robots = [
   {
@@ -171,6 +172,107 @@ export default function Index() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">Реальные кейсы внедрения</h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">
+            Компании, которые уже доверились IClean Pro
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="animate-fade-in">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Icon name="Building2" size={24} className="text-primary" />
+                </div>
+                <CardTitle>ТЦ "Мега"</CardTitle>
+                <CardDescription>Торговый центр, 15 000 м²</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Замена 6 уборщиков на 3 робота IClean Pro Max
+                </p>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-sm">Экономия в месяц:</span>
+                    <span className="font-semibold text-primary">380 000 ₽</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm">Окупаемость:</span>
+                    <span className="font-semibold">14 месяцев</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="animate-fade-in" style={{ animationDelay: '150ms' }}>
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Icon name="Hotel" size={24} className="text-primary" />
+                </div>
+                <CardTitle>Отель "Азимут"</CardTitle>
+                <CardDescription>Гостиница, 8 000 м²</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Уборка холлов и коридоров в ночное время
+                </p>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-sm">Экономия в месяц:</span>
+                    <span className="font-semibold text-primary">220 000 ₽</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm">Окупаемость:</span>
+                    <span className="font-semibold">12 месяцев</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="animate-fade-in" style={{ animationDelay: '300ms' }}>
+              <CardHeader>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Icon name="Factory" size={24} className="text-primary" />
+                </div>
+                <CardTitle>Завод "ТехПром"</CardTitle>
+                <CardDescription>Производство, 25 000 м²</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Поддержание чистоты в производственных цехах
+                </p>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-sm">Экономия в месяц:</span>
+                    <span className="font-semibold text-primary">510 000 ₽</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm">Окупаемость:</span>
+                    <span className="font-semibold">16 месяцев</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-b from-secondary/10 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-4">Калькулятор окупаемости</h2>
+            <p className="text-center text-muted-foreground mb-12 text-lg">
+              Рассчитайте экономию для вашего бизнеса
+            </p>
+            <Card className="animate-fade-in">
+              <CardContent className="pt-6">
+                <Calculator />
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
